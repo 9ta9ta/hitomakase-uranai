@@ -1,62 +1,70 @@
+/* 全体 */
 body {
-  background-color: #ffffff;
-  font-family: "Hiragino Maru Gothic Pro", "Rounded Mplus 1c", sans-serif;
-  text-align: center;
   margin: 0;
   padding: 0;
+  background-color: #fff;
+  font-family: 'Hiragino Maru Gothic Pro', 'Helvetica', sans-serif;
+  text-align: center;
 }
 
-#fortune-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-#fortune-image {
-  width: 80%;
-  max-width: 400px;
+/* トップ画像 */
+#topImage {
+  width: 100%;
   height: auto;
+  max-height: 60vh; /* 高さの上限を設定 */
+  object-fit: contain;
   margin-bottom: 20px;
-  cursor: pointer;
 }
 
-#fortune-button {
+/* 占うボタン */
+#fortuneBtn {
   background-color: #ff99cc;
   color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.5em;
   border: none;
-  border-radius: 16px;
-  padding: 25px 25px;   /* 縦長、正方形寄り */
+  border-radius: 10px;
+  padding: 15px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
-  white-space: pre-line;
-  width: 240px;          /* 横幅やや広め */
+  width: 80%; /* 横幅をスマホでもちょうどよく */
+  max-width: 400px;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
-#fortune-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+/* 結果画像 */
+#resultImage {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-#fortune-text {
-  margin-top: 15px;
-  font-size: 1.4rem;
-  color: #333;
+/* 結果テキスト */
+#resultText {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-/* レスポンシブ調整 */
-@media (max-width: 480px) {
-  #fortune-image {
+/* 非表示 */
+.hidden {
+  display: none;
+}
+
+/* スマホ向け微調整 */
+@media (max-width: 400px) {
+  #fortuneBtn {
+    font-size: 1.3em;
+    padding: 12px;
     width: 90%;
-    max-width: 300px;
   }
-  
-  #fortune-button {
-    width: 180px;       /* スマホで少し狭め */
-    padding: 20px 20px;
-    font-size: 1.6rem;
+
+  #resultText {
+    font-size: 1em;
   }
 }

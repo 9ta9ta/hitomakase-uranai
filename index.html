@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>人任せ占いざんす</title>
+  <title>人任せ占い</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="fortune-container">
-    <!-- トップ画像 -->
-    <img id="fortune-image" src="top.png" alt="トップ画像">
+  <div class="container">
+    <img id="topImage" src="top.png" alt="トップ画像">
+    <button id="fortuneBtn">人任せ占い<br>やるざんす！</button>
 
-    <!-- 占うボタン -->
-    <button id="fortune-button">人任せ占い<br>やるざんす！</button>
-
-    <!-- 結果テキスト -->
-    <div id="fortune-text"></div>
+    <div id="resultContainer" class="hidden">
+      <img id="resultImage" src="" alt="結果画像">
+      <p id="resultText"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>

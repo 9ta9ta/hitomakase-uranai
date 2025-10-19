@@ -1,36 +1,39 @@
-const fortuneButton = document.getElementById("fortune-button");
-const fortuneImage = document.getElementById("fortune-image");
-const fortuneText = document.getElementById("fortune-text");
+const fortuneBtn = document.getElementById('fortuneBtn');
+const topImage = document.getElementById('topImage');
+const resultContainer = document.getElementById('resultContainer');
+const resultImage = document.getElementById('resultImage');
+const resultText = document.getElementById('resultText');
 
-const resultSets = [
-  { a: "result_01_a.png", b: "result_01_b.png" },
-  { a: "result_02_a.png", b: "result_02_b.png" },
-  { a: "result_03_a.png", b: "result_03_b.png" }
+const results = [
+  { a: 'result_01_a.png', b: 'result_01_b.png' },
+  { a: 'result_02_a.png', b: 'result_02_b.png' },
+  { a: 'result_03_a.png', b: 'result_03_b.png' },
 ];
 
-let currentSet = null;
-let stage = 0; // 0=トップ, 1=result_a, 2=result_b
+let currentResult = null;
+let showingB = false;
 
-fortuneButton.addEventListener("click", () => {
-  currentSet = resultSets[Math.floor(Math.random() * resultSets.length)];
-  // ボタンを隠す
-  fortuneButton.style.display = "none";
-  // 画像とテキストを同時に切替
-  fortuneImage.src = currentSet.a;
-  fortuneText.textContent = "ミーをクリックするざんす！";
-  stage = 1;
+fortuneBtn.addEventListener('click', () => {
+  const idx = Math.floor(Math.random() * results.length);
+  currentResult = results[idx];
+
+  topImage.classList.add('hidden');
+  fortuneBtn.classList.add('hidden');
+
+  resultContainer.classList.remove('hidden');
+  resultImage.src = currentResult.a;
+  resultText.textContent = 'ミーをクリックするざんす！';
+  showingB = false;
 });
 
-fortuneImage.addEventListener("click", () => {
-  if (stage === 1) {
-    fortuneImage.src = currentSet.b;
-    fortuneText.textContent = "あとは自力で叶えるざんす〜";
-    stage = 2;
-  } else if (stage === 2) {
-    fortuneImage.src = "top.png";
-    fortuneText.textContent = "";
-    stage = 0;
-    // トップに戻るときにボタンを再表示
-    fortuneButton.style.display = "block";
+resultImage.addEventListener('click', () => {
+  if (!showingB) {
+    resultImage.src = currentResult.b;
+    resultText.textContent = 'あとは自力で叶えるざんす〜';
+    showingB = true;
+  } else {
+    resultContainer.classList.add('hidden');
+    topImage.classList.remove('hidden');
+    fortuneBtn.classList.remove('hidden');
   }
 });
