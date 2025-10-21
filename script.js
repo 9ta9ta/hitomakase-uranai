@@ -8,6 +8,9 @@ const results = [
   { a: 'result_01_a.png', b: 'result_01_b.png' },
   { a: 'result_02_a.png', b: 'result_02_b.png' },
   { a: 'result_03_a.png', b: 'result_03_b.png' },
+  { a: 'result_04_a.png', b: 'result_04_b.png' },
+  { a: 'result_05_a.png', b: 'result_05_b.png' },
+  { a: 'result_06_a.png', b: 'result_06_b.png' },
 ];
 
 let currentResult = null;
