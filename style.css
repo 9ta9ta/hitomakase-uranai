@@ -1,10 +1,9 @@
-/* 全体 */
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
   font-family: 'Hiragino Maru Gothic Pro', 'Helvetica', sans-serif;
   text-align: center;
+  background-color: #fff;
 }
 
 .container {
@@ -12,10 +11,10 @@ body {
   margin: 0 auto;
   padding: 10px;
   position: relative;
-  height: 100vh; /* 画面全体をカバー */
+  height: 100vh;
 }
 
-/* トップ画像 */
+/* トップ画面 */
 #topImage {
   width: 100%;
   height: auto;
@@ -26,14 +25,14 @@ body {
 
 /* 占うボタン */
 #fortuneBtn {
-  background-color: #e60073; /* 濃めのピンク */
+  background-color: #e60073;
   color: white;
   font-size: 1.5em;
   border: none;
   border-radius: 10px;
   padding: 15px;
   cursor: pointer;
-  width: 80%; /* イラスト幅に近づける */
+  width: 80%;
   max-width: 400px;
   line-height: 1.4;
   margin-bottom: 20px;
@@ -48,26 +47,19 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 縦中央 */
-  align-items: center;     /* 横中央 */
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   z-index: 10;
 }
 
 /* 結果画像 */
 #resultImage {
-  width: 75%;
-  max-width: 320px;
-  max-height: 45vh; /* A画像用縮小 */
+  width: 80%;
+  max-width: 400px;
+  max-height: 60vh;
   height: auto;
   margin-bottom: 10px;
-}
-
-/* A画像用縮小クラス */
-#resultImage.a-small {
-  width: 75%;
-  max-width: 320px;
-  max-height: 45vh;
 }
 
 /* 結果テキスト */
@@ -76,12 +68,11 @@ body {
   margin-bottom: 20px;
 }
 
-/* 非表示 */
 .hidden {
   display: none;
 }
 
-/* スマホ向け調整 */
+/* スマホ向け微調整 */
 @media (max-width: 400px) {
   #fortuneBtn {
     font-size: 1.3em;
@@ -94,10 +85,7 @@ body {
   }
 
   #resultImage {
-    max-height: 40vh;
-  }
-
-  #resultImage.a-small {
-    max-height: 40vh;
+    width: 90%;
+    max-height: 50vh;
   }
 }
