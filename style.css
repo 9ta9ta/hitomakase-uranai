@@ -45,26 +45,12 @@ body {
   margin-bottom: 10px;
 }
 
+/* 結果B画像専用 */
+#resultImage.b-small {
+  width: 70%;      /* 好みで調整可 */
+  max-width: 350px; 
+}
+
 /* 結果テキスト */
 #resultText {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-/* 非表示 */
-.hidden {
-  display: none;
-}
-
-/* スマホ向け微調整 */
-@media (max-width: 400px) {
-  #fortuneBtn {
-    font-size: 1.3em;
-    padding: 12px;
-    width: 90%;
-  }
-
-  #resultText {
-    font-size: 1em;
-  }
-}
+  font-size
