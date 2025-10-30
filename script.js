@@ -28,10 +28,10 @@ fortuneBtn.addEventListener('click', () => {
   resultText.textContent = 'ミーをクリックするざんす！';
   showingB = false;
 
-  // ✅ 結果A画像：やや大きめ（約95%）
-  resultImage.style.width = '95%';
-　resultImage.style.maxWidth = '480px';
-　resultImage.style.maxHeight = '70vh';
+  // ✅ 結果A画像：やや大きめ（約98%）
+  resultImage.style.width = '98%';
+　resultImage.style.maxWidth = '520px';
+　resultImage.style.maxHeight = '75vh';
 　resultImage.style.objectFit = 'contain';
 
   // ✅ 効果音（A：kozutumi.mp3）
@@ -46,10 +46,10 @@ resultImage.addEventListener('click', () => {
     showingB = true;
 
     // ✅ 結果B画像：やや小さめ（約75%）
-    resultImage.style.width = '75%';
-    resultImage.style.maxWidth = '380px';
-    resultImage.style.maxHeight = '55vh';
-    resultImage.style.objectFit = 'contain';
+    resultImage.style.width = '80%';
+　　resultImage.style.maxWidth = '380px';
+　　resultImage.style.maxHeight = '55vh';
+　　resultImage.style.objectFit = 'contain';
 
     // ✅ 効果音（B：pahu.mp3）
     const soundB = new Audio('pahu.mp3');
