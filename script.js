@@ -4,6 +4,7 @@ const resultContainer = document.getElementById('resultContainer');
 const resultImage = document.getElementById('resultImage');
 const resultText = document.getElementById('resultText');
 
+// 結果A/Bの対応配列
 const results = [
   { a: 'result_01_a.png', b: 'result_01_b.png' },
   { a: 'result_02_a.png', b: 'result_02_b.png' },
@@ -26,11 +27,11 @@ fortuneBtn.addEventListener('click', () => {
 
   resultContainer.classList.remove('hidden');
   resultImage.src = currentResult.a;
-  resultImage.classList.add('a-small'); // A画像用に縮小
+  resultImage.classList.add('a-small'); // A画像は縮小
   resultText.textContent = 'ミーをクリックするざんす！';
   showingB = false;
 
-  // 効果音（スマホ対応）
+  // 効果音A（クリックイベント内で作る）
   const soundA = new Audio('kozutumi.mp3');
   soundA.play().catch(e => console.log("A音再生エラー:", e));
 });
@@ -39,11 +40,11 @@ fortuneBtn.addEventListener('click', () => {
 resultImage.addEventListener('click', () => {
   if (!showingB) {
     resultImage.src = currentResult.b;
-    resultImage.classList.remove('a-small'); // B画像は縮小なし
+    resultImage.classList.remove('a-small'); // B画像は原寸
     resultText.textContent = 'あとは自力で叶えるざんす〜';
     showingB = true;
 
-    // 効果音（スマホ対応）
+    // 効果音B
     const soundB = new Audio('pahu.mp3');
     soundB.play().catch(e => console.log("B音再生エラー:", e));
   } else {

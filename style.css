@@ -11,7 +11,8 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 10px;
-  position: relative; /* 結果表示用 */
+  position: relative;
+  height: 100vh; /* 画面全体をカバー */
 }
 
 /* トップ画像 */
@@ -25,14 +26,14 @@ body {
 
 /* 占うボタン */
 #fortuneBtn {
-  background-color: #ff99cc;
+  background-color: #e60073; /* 濃めのピンク */
   color: white;
   font-size: 1.5em;
   border: none;
   border-radius: 10px;
   padding: 15px;
   cursor: pointer;
-  width: 80%;
+  width: 80%; /* イラスト幅に近づける */
   max-width: 400px;
   line-height: 1.4;
   margin-bottom: 20px;
@@ -57,12 +58,12 @@ body {
 #resultImage {
   width: 75%;
   max-width: 320px;
-  max-height: 45vh; /* A画像用に制限 */
+  max-height: 45vh; /* A画像用縮小 */
   height: auto;
   margin-bottom: 10px;
 }
 
-/* A画像用に縮小 */
+/* A画像用縮小クラス */
 #resultImage.a-small {
   width: 75%;
   max-width: 320px;
@@ -80,7 +81,7 @@ body {
   display: none;
 }
 
-/* スマホ向け微調整 */
+/* スマホ向け調整 */
 @media (max-width: 400px) {
   #fortuneBtn {
     font-size: 1.3em;
