@@ -31,7 +31,7 @@ fortuneBtn.addEventListener('click', () => {
   // ✅ 結果A画像：やや大きめ（約98%）
   resultImage.style.width = '98%';
 　resultImage.style.maxWidth = '520px';
-　resultImage.style.maxHeight = '75vh';
+　resultImage.style.maxHeight = '85vh';
 　resultImage.style.objectFit = 'contain';
 
   // ✅ 効果音（A：kozutumi.mp3）
@@ -48,7 +48,7 @@ resultImage.addEventListener('click', () => {
     // ✅ 結果B画像：やや小さめ（約75%）
     resultImage.style.width = '80%';
 　　resultImage.style.maxWidth = '380px';
-　　resultImage.style.maxHeight = '55vh';
+　　resultImage.style.maxHeight = '70vh';
 　　resultImage.style.objectFit = 'contain';
 
     // ✅ 効果音（B：pahu.mp3）
