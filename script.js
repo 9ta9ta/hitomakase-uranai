@@ -28,11 +28,11 @@ fortuneBtn.addEventListener('click', () => {
   resultText.textContent = 'ミーをクリックするざんす！';
   showingB = false;
 
-  // ✅ 結果A画像：やや大きめ（約90%）
-  resultImage.style.width = '90%';
-  resultImage.style.maxWidth = '450px';
-  resultImage.style.maxHeight = '65vh';
-  resultImage.style.objectFit = 'contain';
+  // ✅ 結果A画像：やや大きめ（約95%）
+  resultImage.style.width = '95%';
+　resultImage.style.maxWidth = '480px';
+　resultImage.style.maxHeight = '70vh';
+　resultImage.style.objectFit = 'contain';
 
   // ✅ 効果音（A：kozutumi.mp3）
   const soundA = new Audio('kozutumi.mp3');
